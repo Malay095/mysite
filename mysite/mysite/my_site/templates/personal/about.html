@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TCG Consulting INC</title>
+<meta name="description" content="Awesome Description Here">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% load staticfiles %}
+<link href="{% static 'personal/css/style.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'personal/css/bootstrap.min.css' %}"  rel="stylesheet" type="text/css">
+<link href="{% static 'personal/css/bootstrap-grid.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'personal/css/bootstrap-reboot.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'personal/css/animate.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'personal/css/fontawesome-all.css' %}" rel="stylesheet" type="text/css">
+
+<script src="{% static 'personal/js/wow.js' %}"></script>
+<script src="{% static 'personal/js/wow.min.js' %}"></script>
+<script src="js/jquery.min.js"></script>
+{% block extrascripts %}
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
+  
+  <script>
+  	// Instantiate the Bootstrap carousel
+$('.multi-item-carousel').carousel({
+  interval: false
+});
+
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+$('.multi-item-carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo($(this));
+  } else {
+  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
+});
+  </script>
+    {% endblock %}
+
+</head>
+
+<body>
+
+<header class="row wow fadeIn futura-medium">
+    <div class="head-top text-center">
+        <p class="text-white futura-light text-uppercase mg-0">welcome to TCG GENETICS - Website currently under development</p>
+     </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'personal/images/logo.png' %}"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav text-uppercase">                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active" href="{% url 'about' %}">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'services' %}">services</a>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'media' %}">media</a>
+                    </li>                                        
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">blog</a>
+                    </li>                                                           
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact</a>
+                    </li>                                                                               
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>          
+                </ul>
+            </div>
+            <form class="form-inline" action="/">
+                <button class="btn" type="submit"> <i class="fas fa-search"></i></button>
+            </form>
+        </nav>
+
+    </div>
+</header>
+<section class="about-banner futura-light margin_top wow fadeIn" data-wow-duration="800ms">
+    <div class="container">
+        <h1 class="text-capitalize margin_bottom">about us</h1>	
+    </div>    
+</section>
+
+<section  class="about-content  futura-light" >
+   <div class="container">         
+        <img src="{% static 'personal/images/about-content.png' %}" class="float-right img-fluid wow fadeInRight" data-wow-duration="1000ms"/>      
+        <p class="wow fadeInLeft" data-wow-duration="1100ms">TCG Industries is both a family owned and operated, Los 
+        Angeles based Umbrella Company housing some of the 
+        most reputable cannabis brands in the country. Facilitating 
+        industry specific needs with well over 55 years of 
+        experience in cultivating high grade cannabis. TCG was 
+        founded to meet the needs of the rapidly developing 
+        regulated cannabis industry. Services include but are not 
+        limited to designing and operating cultivation facilities with 
+        up to 200 lights in addition to developing cannabis strains 
+        in the greater Los Angeles area.</p>
+
+        <p class="wow fadeInLeft" data-wow-duration="1100ms">The Cannabis Gardner and Payasogrow are the pioneer 
+        brands that are named after the master growers of the facilities 
+        that produce the cannabis flower, in which all of the following 
+        brands are sourced from. Mr B.’s Extracts, is the award-
+        winning extract entity of TCG that provides full service 
+        cannabis extraction. Black Gold RSO, as the brand name suggests, offers CBD and RSO (Rick Simpson Oil, a 
+        concentrated form of cannabis oil) to clientele for medical benefits. Cannaessentials is the topical line with products 
+        varying from a healing salve to facial serums, giving TCG industries its serene touch.</p>
+
+        <p class="wow fadeInLeft" data-wow-duration="1100ms">Collectively the brands have developed over ten top winning strains, produced some of the most consistent and 
+        high-quality cannabis genetics, with several sought after cross breeds and many more to come. Considering the wealth 
+        of experience that built TCG industries and the rapid growth within the cannabis industry, business partners and master 
+        growers, Philip and Terence Cabral brought in sisters, Maria and Paulette Cabral as a beneficial addition to the team. 
+        Together they are primarily focused on legality, infrastructure, expansion and contracting, rounding out the executive 
+        team in totality. With the expertise in toe, TCG Industries also offer end-to-end consulting services exclusively for large 
+        scale operations.</p> 
+
+        <p class="wow fadeInLeft" data-wow-duration="1100ms">To date the highest THC value grown has been up to 34% and the team has collected two High Times Cannabis Cup 
+        Awards. Specializing in indoor and outdoor pesticide free, and all organic practices. With decades of experience in 
+        several mediums and growing environments from soilless, soil, coco, etc. TCG Industries passion for helping people 
+        combined with their industry specific talent and experience are what truly differentiates them from many other cannabis 
+        producers. They are known for developing award-winning product that remains in the highest of demand throughout 
+        a distribution network that encompasses the world. </p>
+    </div>   
+</section>
+
+<section class="about margin_top wow fadeIn" data-wow-duration="800ms">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 pd-0 about-block wow fadeInLeft" data-wow-duration="1000ms">
+                 <img src="{% static 'personal/images/about-1.png' %}" class="img-fluid" alt="" width="100%" height="100%"/>	                
+            </div>
+            <div class="col-sm-6 pd-0 about-block wow fadeInRight" data-wow-duration="1100ms">
+                 <img src="{% static 'personal/images/about-2.png' %}" class="img-fluid" alt="" width="100%" height="100%"/>	                
+            </div>
+        </div>  
+    </div>    
+</section>
+
+<footer class="futura-light">
+    <div class="container">
+    	<div class="row text-white footer-blocks">
+            <div>
+                <h4 class="futura-medium">COMPANY</h4>
+                <ul>
+                    <li><a href="{% url 'home' %}" class="text-white">about us</a></li>
+                    <li><a href="{% url 'about' %}" class="text-white">Services</a></li>
+                    <li><a href="{% url 'vendors' %}" class="text-white">vendors</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="futura-medium">media</h4>
+                <ul>
+                    <li><a href="#" class="text-white">images</a></li>
+                    <li><a href="#" class="text-white">video</a></li>
+                    <li><a href="#" class="text-white">blog</a></li>
+                    
+                </ul>
+            </div>  
+            
+            <div>
+                <h4>help</h4>
+                <ul>
+                    <li><a href="#" class="text-white">contact us</a></li>                    
+                </ul>
+            </div>  
+            
+            <div>
+                <h4  class="futura-medium">Follow us</h4>
+                <ul class="social-links row text-center">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                     <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+
+                </ul>
+            </div>
+            
+            <div>
+                <h4>don't miss out</h4>
+                <form>
+                    <input type="text" placeholder="enter your email address...."/><input type="button" value="sign up"  class="text-white"/>
+                </form>
+            </div>                                                        
+        </div>
+    </div>    
+	
+</footer>
+
+<script src="{% static 'personal/js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

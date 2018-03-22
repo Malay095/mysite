@@ -1,0 +1,117 @@
+@font-face {font-family: Futura-Light;src:url(../fonts/Futura%20Light%20Regular.otf);}
+@font-face {font-family: Futura-Medium; src:url(../fonts/Futura-Medium.otf);}
+
+
+/* Common Css */
+.row{margin-left:0px !important; margin-right:0px !important;}
+.text-white{color:#fff;}
+.pd-0{padding:0px !important;}
+.mg-0{margin:0px !important;}
+.futura-light{font-family:Futura-Light;}
+.futura-medium{font-family:Futura-Medium;}
+::-webkit-input-placeholder {  color: #acacac; text-transform: uppercase; font-weight: 600;}
+input::focus, input::active{ outline:none; border: none;}
+a:hover{ text-decoration: underline !important; color: inherit !important; }
+a{ transition: 1s all ease;}
+.margin_bottom{margin-bottom: 16px;}
+.margin_top{ margin-top: 12px; }
+h1{ font-size: 60px !important; font-weight:normal !important; }
+/* Common Css */
+
+/* Wow Animation */
+ .wow:first-child {visibility: hidden;}
+/* Wow Animation */
+
+/* header */
+.head-top{background-color:#000000; float:left; width:100%; padding:5px 0px;}
+header ul li{ padding:22px 27px;}
+header .search img{ padding-left: 34px;} 
+header ul li a,.navbar-dark .navbar-nav .nav-link{ font-size: 20px; font-weight: 800; color: #000 !important; }
+header i{ color: #000; }
+header ul li .active{ color: #11b300;}
+.navbar-nav{ margin-top: -8px;}
+.navbar{     padding: 0.5rem 0rem !important;}
+.active{ color: #11b300 !important;}
+/* banner */
+.banner img{width:100%;}
+/* banner */
+
+.info-banners{padding:30px 0px;}
+.info-banners img{width:100%; margin-bottom:30px;}
+
+/*About Page*/
+.about-banner h1, .services-banner h1 { border-bottom: 5px solid #13a89e; }
+.about-content p{  font-size: 22px;   line-height: 1.1;}
+.about-content img{ padding-left: 20px;  padding-bottom: 28px;}
+.about .about-block{ padding-right: 6px !important;}
+.about{ margin-bottom: 35px; }
+
+/*services page*/
+.services{ margin-bottom:34px;  }
+.services-banner h1{ padding-bottom: 10px;} 
+.services-banner p{ font-size: 21px; line-height: 1.3; padding-right: 50px; margin-bottom: 67px;}
+.services-banner form{ padding: 0px 48px;}
+.services-banner .fn, .services-banner .ln{ max-width: 440px;}
+.services-banner form div{ width:100%; margin-right: 12px; font-size: 20px;  margin-bottom: 31px;}
+.services-banner .mn{ max-width: 109px; }
+.services-banner .email{ max-width: 570px;}
+.services-banner .pn{ max-width: 432px; margin-right: 0px;}
+.services-banner input, .services-banner textarea{ width:100%; }
+.services-banner textarea{ height: 210px; }
+.services-banner .submit { width: 240px; }
+.services-banner input[type="submit"]{ font-size: 23px; font-weight: 800; cursor: pointer; border-radius:5px !important; }
+/* The container */
+.checkbox-container { margin: 0px 25px; position: relative;  padding-left: 35px;  cursor: pointer;  font-size: 22px;  -webkit-user-select: none;
+    -moz-user-select: none;  -ms-user-select: none;  user-select: none;}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input { position: absolute;  opacity: 0;   cursor: pointer; box-shadow: 5px 4px 1px #000; }
+
+/* Create a custom checkbox */
+.checkmark {  position: absolute; top: 3px;  left: 0;   height: 26px;   width: 21px;  border: 2px solid #a7a7a7; box-shadow: -3px 3px; }
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark { background-color: #ccc;}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {  background-color: #6c6c6c;}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {   content: "";   position: absolute;    display: none;}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {   display: block;}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {  left: 5px;   top: 3px;    width: 7px;    height: 12px;    border: solid white;
+    border-width: 0 3px 3px 0;   -webkit-transform: rotate(45deg);    -ms-transform: rotate(45deg);    transform: rotate(45deg);}
+
+/*media page*/
+.media-images img{ position: relative; }
+.mright0{ margin-right: 0px !important}
+.OverlayIcon{ position: absolute !important; top:50%  !important; left:50% !important; transform: translate(-50%,-50%); }
+.media-images div{ margin-bottom: 34px; margin-right: 2px;  cursor: pointer; position: relative; }
+
+/*vendor-content page*/
+.vendor-content .blockv p{ font-size: 16px; line-height: 1.4; }
+.vendor-content .blockv b{ font-weight: 800; }
+.vendor-content .blockv{ margin-bottom: 46px; }
+.vendor-content span{ margin-top: 24px; font-size: 22px; margin-bottom: 35px;}
+
+/*footer*/
+footer{ background: #000; padding-top: 55px; padding-bottom: :163px; }
+footer ul li a{ text-transform: uppercase; font-size: 17px; display: inline-block;}
+footer ul{ padding-left: 0px; }
+footer ul li{ list-style: none; line-height: 1.4; }
+footer h4{ margin-bottom: 30px;   font-size: 18px;   font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+footer .social-links li{ height: 43px;  border-radius: 5px; width: 43px; padding:8px; background: #fff; margin-right: 5px;}
+footer .social-links li i{ color: #000; font-size:30px;}
+footer input[type="text"]{ width:334px; height: 40px; border: 2px solid #13a89e;  padding:15px 10px; background: transparent; letter-spacing: 1px; border-radius: 5px;            border-top-right-radius: 0px; border-bottom-right-radius: 0px; }
+footer input[type="button"],.services-banner input[type="submit"] { background: #13a89e; border: 2px solid #13a89e; text-transform: uppercase; font-size: 14px;
+    padding: 8px 23px;  font-family:futura-medium; letter-spacing: 1px; border-radius: 5px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; }
+footer .footer-blocks div{padding-right: 20px;}
+footer .footer-blocks div:first-child{ width: 100%; max-width: 144px;}
+footer .footer-blocks div:nth-child(2){width: 100%; max-width: 102px;}
+footer .footer-blocks div:nth-child(3){width: 100%; max-width: 162px;}
+footer .footer-blocks div:nth-child(4){width: 100%; max-width: 214px;}
+
